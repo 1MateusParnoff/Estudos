@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        System.out.print("Titulo do livro ? ");
+        String Titulo = sc.nextLine();
+
+        System.out.print("Autor do livro ? ");
+        String Autor = sc.nextLine();
+
+        System.out.print("Número de paginas do livro ? ");
+        int numeroPaginas = sc.nextInt();
+
+        String categoriaDescricao;
+
+        System.out.println("Qual a categoria dele ?\n " +
+                "F - Ficção\n " +
+                "N - Não ficção\n " +
+                "T - Tecnologia\n " +
+                "H - História");
+
+        char categoria = sc.next().toUpperCase().charAt(0);
+        if (categoria == 'F') {
+                categoriaDescricao = "Ficção";
+        } else if (categoria == 'N') {
+                categoriaDescricao = "Não-ficção";
+        } else if (categoria == 'T') {
+                categoriaDescricao = "Tecnologia";
+        } else if (categoria == 'H') {
+                categoriaDescricao = "História";
+        } else {
+                categoriaDescricao = "Inválido";
+        }
+
+
+
+        System.out.println("O titulo do livro é " + Titulo);
+        System.out.println("O nome do autor é " + Autor);
+        System.out.println("O livro tem " + numeroPaginas + " paginas");
+        System.out.println("A categoria dele é " + categoriaDescricao);
+}
