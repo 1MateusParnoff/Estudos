@@ -1,0 +1,13 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        System.out.print("Valor em real ? ");
+        Double dinheiroReal = sc.nextDouble();
+        Double dolar = 5.25;
+        Double soma = dinheiroReal / dolar;
+        System.out.println(" Você tem: US$" + soma);
+}
