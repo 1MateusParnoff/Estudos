@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        System.out.print("Qual é o preço? ");
+        double preco = sc.nextDouble();
+
+        String categoria;
+
+        if (preco <= 50) {
+                categoria = "Econômico";
+        } else if (preco >= 50.01 && preco <= 200) {
+                categoria = "Intermediario";
+        } else
+                categoria = "Premium";
+
+
+        System.out.println("O preço é " + preco + " e é " + categoria);
+
+}
