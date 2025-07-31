@@ -1,0 +1,21 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Qual sua idade? ");
+        int idade = sc.nextInt();
+
+        System.out.print("Quanto você pesa? ");
+        double peso = sc.nextDouble();
+
+        int pesoMin = 50;
+        int idadeMin = 18;
+        int idadeMax = 65;
+
+        if(peso >= pesoMin && idadeMin <= idade && idadeMax >= idade){
+                System.out.println("Doardor compatível");
+        } else {
+                System.out.println("O doador não é compatível");
+        }
+}
