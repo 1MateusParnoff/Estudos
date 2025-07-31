@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+        public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                System.out.print("Digite o valor da compra: ");
+                int valorCompra = sc.nextInt();
+                int valorDesconto = 100;
+                int conta;
+
+                if (valorCompra >= valorDesconto) {
+                        valorDesconto = valorCompra / 10;
+                        conta = valorCompra - valorDesconto;
+                        System.out.println("O desconto é a receber é de R$" + valorDesconto);
+                        System.out.println("O valor a pagar é de R$" + conta);
+                } else {
+                        System.out.println("Não se aplica desconto");
+                }
+        }
+}
