@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o valor do empréstimo: ");
+        int emprestimo = sc.nextInt();
+
+        if (emprestimo >= 1000 && emprestimo <= 5000) {
+                System.out.println("O valor " + emprestimo + " está dentro do intervalo permitido para empréstimo.");
+        } else {
+                System.out.println("O valor " + emprestimo + " não está dentro do intervalo permitido para empréstimo.");
+        }
+}
