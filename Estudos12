@@ -1,0 +1,42 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o dia da semana? ");
+        String diga = sc.nextLine().toUpperCase();
+
+        if (diga.equals("DOMINGO")) {
+                System.out.println(diga + " não é um dia útil");
+        } else if (diga.equals("SABADO")) {
+                System.out.println(diga + " não é um dia útil");
+        } else {
+                System.out.println(diga + " é um dia útil");
+        }
+}
+
+/*
+        if (diga.equals("SEGUNDA") || diga.equals("TERÇA") ||
+        diga.equals("QUARTA") || diga.equals("QUINTA") ||
+                diga.equals("SEXTA")) {
+                System.out.println(diga + " é um dia útil");
+
+        } else {
+                System.out.println(diga + " não é um dia útil");
+        }
+
+   if (diga.equals("SEGUNDA")) {
+                System.out.println(diga + " é um dia útil");
+        } else if (diga.equals("TERÇA")) {
+                System.out.println(diga + " é um dia útil");
+        } else if (diga.equals("QUARTA")) {
+                System.out.println(diga + " é um dia útil");
+        } else if (diga.equals("QUINTA")) {
+                System.out.println(diga + " é um dia útil");
+        } else if (diga.equals("SEXTA")) {
+                System.out.println(diga + " é um dia útil");
+        } else {
+                System.out.println(diga + " não é um dia útil");
+        }
+}
+ */
