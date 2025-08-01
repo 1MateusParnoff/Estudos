@@ -1,0 +1,16 @@
+
+import java.util.Scanner;
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o nome de um arquivo ex: Curriculo.pdf: ");
+        String texto = sc.nextLine();
+
+        Pattern pattern = Pattern.compile("\\w+");
+        Matcher textoFormatado = pattern.matcher(texto);
+
+        if (textoFormatado.find()) {
+                System.out.println("O correto é " + texto);
+                System.out.println("O formatado é " + textoFormatado.group());
+        }
+}
