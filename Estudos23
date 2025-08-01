@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+        public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                System.out.print("Digite uma frase: ");
+                String text = sc.nextLine();
+
+                System.out.print("Digite a palavra a ser trocada: ");
+                String palavraTrocada = sc.nextLine();
+
+                if (!text.contains(palavraTrocada)) {
+                        System.out.println("Palavra não encontrada.");
+                return;
+                }
+                System.out.print("Digite a nova palavra: ");
+                String novaPalavra = sc.nextLine();
+
+                String novaFrase = text.replace(palavraTrocada,novaPalavra);
+                System.out.println(novaFrase);
+
+        }
