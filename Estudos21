@@ -1,6 +1,11 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
         public static void main(String[] args) {
-                String nome = "     João silva";
-                System.out.println(nome.trim());
+                Scanner sc = new Scanner(System.in);
+                System.out.print("Qual seu nome? ");
+                String nome = sc.nextLine();
+
+                System.out.println("Nome com espaços:     " + nome);
+                System.out.println("Nome sem espaços: " + nome.trim());
         }
