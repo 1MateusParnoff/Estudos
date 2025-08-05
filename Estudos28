@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o texto: ");
+        String texto = sc.nextLine();
+
+        Pattern pattern = Pattern.compile("#\\w+");
+        Matcher matcher = pattern.matcher((texto));
+
+        if (matcher.find()) {
+                System.out.println("Hashtags encontradas: " + texto);
+        } else {
+                System.out.println("Hashtags não encontradas:");
+        }
+}
+
