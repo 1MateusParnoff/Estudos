@@ -1,0 +1,16 @@
+import java.text.DateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+public class Estudos {
+    public static void main(String[] args) {
+        LocalDate dataInicio = LocalDate.of(2025, 03, 15);
+
+        LocalDate adicionadoPrazo = dataInicio.plusDays(15);
+
+        DateTimeFormatter dataFormatada = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        System.out.println("Data de entrega:! " + adicionadoPrazo.format(dataFormatada));
+    }
+}
