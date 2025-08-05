@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite o CPF: \n(Formato xxx.xxx.xxx-xx) ");
+        String CPF = sc.nextLine();
+        Pattern pattern = Pattern.compile("^\\d{3}.\\d{3}.\\d{3}-\\d{2}$");
+        Matcher matcher = pattern.matcher((CPF));
+
+        if (matcher.matches()) {
+                System.out.println("O CPF está no padrão");
+        } else {
+                System.out.println("O CPF não está no padrão");
+        }
+}
