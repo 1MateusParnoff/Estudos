@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o codigo: ");
+        String codigo = sc.nextLine();
+        Pattern pattern = Pattern.compile("(\\w+)-(\\w+)");
+        Matcher matcher = pattern.matcher((codigo));
+
+        if (matcher.find()) {
+                System.out.println("O código de referência está válido.");
+        } else {
+                System.out.println("O código de referência não está válido.");
+        }
+}
