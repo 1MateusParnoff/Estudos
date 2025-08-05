@@ -1,0 +1,26 @@
+import java.text.DateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+public class Estudos {
+    public static void main(String[] args) {
+        LocalDate dataEventoAtrasada = LocalDate.of(2025, 03, 10);
+
+        LocalDate dataEventoAtual = LocalDate.of(2025, 03, 15);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+        String dataAtrasadaFormatada = dataEventoAtrasada.format(formatter);
+        String dataAtualFormatada = dataEventoAtual.format(formatter);
+
+        boolean comparacao = dataEventoAtrasada.isBefore(dataEventoAtual);
+        if (comparacao == true) {
+            System.out.println("Data do evento: " + dataAtrasadaFormatada);
+            System.out.println("Data atual: " + dataAtualFormatada);
+            System.out.println("O evento já ocorreu");
+        } else {
+            System.out.println("O evento não ocorreu");
+        }
+    }
+}
