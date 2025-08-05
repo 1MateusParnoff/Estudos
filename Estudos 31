@@ -1,0 +1,10 @@
+import java.time.LocalTime;
+import java.time.Duration;
+
+public static void main(String[] args) {
+        LocalTime inicioTrabalho = LocalTime.of(14, 30, 0);
+        LocalTime fimTrabalho = LocalTime.of(16, 45, 0);
+
+        Duration diferenca = Duration.between(inicioTrabalho, fimTrabalho);
+        System.out.println("Diferença de tempo: " + diferenca.toHours() + " horas e " + diferenca.toMinutesPart() + " minutos");
+}                                                                                     // diferenca.toMinutes() - Estava utilizando o codigo assim e estava retornando a diferença total mas em minutos
