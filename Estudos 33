@@ -1,0 +1,16 @@
+import java.text.DateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+public class Estudos {
+    public static void main(String[] args) {
+        LocalDate dataVencimento= LocalDate.of(2025, 03, 20);
+
+        LocalDate adicionadoPrazo = dataVencimento.plusMonths(1);
+
+        DateTimeFormatter dataFormatada = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+        System.out.println("Nova data de vencimento: " + adicionadoPrazo.format(dataFormatada));
+    }
+}
