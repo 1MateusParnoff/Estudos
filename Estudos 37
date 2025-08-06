@@ -1,0 +1,43 @@
+import java.time.LocalTime;
+import java.time.Duration;
+import java.util.Scanner;
+
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+
+        System.out.print("Digite o horário de entrada (HH:mm): ");
+        LocalTime entrada = LocalTime.parse(sc.next(), formatter);
+
+        System.out.print("Digite o horário de saída (HH:mm): ");
+        LocalTime saida = LocalTime.parse(sc.next(), formatter);
+
+        System.out.print("Digite a carga horário (em horas): ");
+        int cargaHoraria = sc.nextInt();
+
+        LocalTime saidaPrevista = entrada.plusHours(cargaHoraria).plusHours(1).plusMinutes(12);
+
+        Duration horasTrabalhadas = Duration.between(saidaPrevista, saida);
+
+        long horas = horasTrabalhadas.toHours();
+        long minutos = horasTrabalhadas.toMinutesPart();
+
+        if (horas == 0 && minutos == 0) {
+                System.out.println("Saldo de horas: 0h 0min");
+        } else {
+                String sinal;
+
+                if (horas > 0 || minutos > 0) {
+                        sinal = "+";
+                } else {
+                        sinal = "-";
+                }
+
+                System.out.println("Horário de entrada: " + entrada);
+                System.out.println("Horário de saída: " + saida);
+                System.out.println("Horas trabalhadas: " + horas);
+                System.out.println("Horário de saída prevista: " + saidaPrevista);
+                System.out.println("Saldo de horas: " + sinal + Math.abs(horas) + "h " + Math.abs(minutos) + "min");
+        }
+
+}
