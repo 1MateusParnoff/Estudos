@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Qual a temperatura atual: ");
+    double temperatura = sc.nextDouble();
+
+    double calculoFahrenheit = (temperatura * 1.8) + 32;
+    System.out.println("Temperatura atual é: " + temperatura);
+    System.out.println("Fahrenheit atual é: " + calculoFahrenheit);
+}
