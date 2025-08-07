@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public static void main(String[] args) {
+    boolean chaveCarro = false;
+    String controleCarro = "sim";
+
+    if (chaveCarro == true || controleCarro.equalsIgnoreCase("SIM")) {
+        System.out.println("Carro aberto!");
+    } else {
+        System.out.println("Carro fechado!");
+    }
+}
